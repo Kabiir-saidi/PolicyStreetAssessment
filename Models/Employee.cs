@@ -32,14 +32,10 @@ public class Employee
     public string? Gender { get; set; }
 
     public int DepartmentId { get; set; }
-    public Department Department { get; set; } = null!;
 
     public int PositionId { get; set; }
-    public Position Position { get; set; } = null!;
 
-    // FK of Employee (Employee -> Employee)
     public int? ManagerId { get; set; }
-    public Employee? Manager { get; set; }
 
     public DateOnly HireDate { get; set; }
 
@@ -47,7 +43,6 @@ public class Employee
     [StringLength(20)]
     public string EmploymentStatus { get; set; } = "Active";
 
-    //monthly salary RM
     [Range(0, 99999.99)]
     public decimal Salary { get; set; }
 
@@ -55,7 +50,4 @@ public class Employee
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     public bool IsActive { get; set; } = true;
-
-    // Navigation
-    public ICollection<Employee> Subordinates { get; set; } = new List<Employee>();
 }

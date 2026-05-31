@@ -17,8 +17,4 @@ public class Department
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public bool IsActive { get; set; } = true;
-
-    // Navigation
-    public ICollection<Position> Positions { get; set; } = new List<Position>();
-    public ICollection<Employee> Employees { get; set; } = new List<Employee>();
 }

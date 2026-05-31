@@ -29,12 +29,6 @@ public class AppDbContext : DbContext
             .HasIndex(e => e.Email).IsUnique();
 
         modelBuilder.Entity<Employee>()
-            .HasOne(e => e.Manager)
-            .WithMany(e => e.Subordinates)
-            .HasForeignKey(e => e.ManagerId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        modelBuilder.Entity<Employee>()
             .Property(e => e.Salary)
             .HasColumnType("decimal(7,2)");
     }

@@ -17,7 +17,4 @@ public class Position
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public bool IsActive { get; set; } = true;
-
-    // Navigation
-    public ICollection<Employee> Employees { get; set; } = new List<Employee>();
 }
