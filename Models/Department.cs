@@ -7,7 +7,7 @@ public class Department
     public int DepartmentId { get; set; }
 
     [Required]
-    [StringLength(4, MinimumLength = 4)]
+    [StringLength(4, MinimumLength = 2)]
     public string DepartmentCode { get; set; } = string.Empty;
 
     [Required]

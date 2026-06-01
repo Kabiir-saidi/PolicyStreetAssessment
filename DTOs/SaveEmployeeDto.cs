@@ -1,15 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PolicyStreetAssessment.Models;
+namespace PolicyStreetAssessment.DTOs;
 
-public class Employee
+public class SaveEmployeeDto
 {
-    public int EmployeeId { get; set; }
-
-    [Required]
-    [StringLength(20)]
-    public string EmployeeCode { get; set; } = string.Empty;
-
     [Required]
     [StringLength(100)]
     public string FirstName { get; set; } = string.Empty;
@@ -26,15 +20,19 @@ public class Employee
     [StringLength(20)]
     public string? Phone { get; set; }
 
+    [Required]
     public DateOnly DateOfBirth { get; set; }
 
     [StringLength(10)]
     public string? Gender { get; set; }
 
+    [Required]
     public int DepartmentId { get; set; }
 
+    [Required]
     public int PositionId { get; set; }
 
+    [Required]
     public DateOnly HireDate { get; set; }
 
     [Required]
@@ -43,9 +41,4 @@ public class Employee
 
     [Range(0, 99999.99)]
     public decimal Salary { get; set; }
-
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-
-    public bool IsActive { get; set; } = true;
 }

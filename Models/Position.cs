@@ -7,7 +7,7 @@ public class Position
     public int PositionId { get; set; }
 
     [Required]
-    [StringLength(4, MinimumLength = 4)]
+    [StringLength(4, MinimumLength = 2)]
     public string PositionCode { get; set; } = string.Empty;
 
     [Required]
