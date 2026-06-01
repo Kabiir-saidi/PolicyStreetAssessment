@@ -14,7 +14,7 @@
 2. Get `PolicyStreetAssessment.bacpac` from project root  
 3. Open SSMS → Object Explorer → Databases → Right click → Import Data-tier Application  
 4. Import `PolicyStreetAssessment.bacpac`  
-5. Update connection string in `appsettings.json`:
+5. Update connection string in `appsettings.json`: e.g below
 
 ```json
 "DefaultConnection": "Server=localhost\\SQLEXPRESS01;Database=PolicyStreetAssessment;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True;"
